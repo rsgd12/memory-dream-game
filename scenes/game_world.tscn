@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://game_world"]
+
+[ext_resource type="Script" path="res://scripts/game_world.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2"]
+
+[node name="GameWorld" type="Node2D"]
+script=ExtResource("1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+offset_right=1920.0
+offset_bottom=1080.0
+color=Color(0.95, 0.95, 0.98, 1)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position=Vector2(960, 540)
+script=ExtResource("2")
+
+[node name="Sprite" type="ColorRect" parent="Player"]
+offset_left=-25.0
+offset_top=-40.0
+offset_right=25.0
+offset_bottom=40.0
+color=Color(0.2, 0.2, 0.3, 1)
+
+[node name="MemorySpots" type="Node" parent="."]
+
+[node name="Memory1" type="Area2D" parent="MemorySpots"]
+position=Vector2(400, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MemorySpots/Memory1"]
+shape=CircleShape2D.new()
+
+[node name="Visual" type="ColorRect" parent="MemorySpots/Memory1"]
+offset_left=-50.0
+offset_top=-50.0
+offset_right=50.0
+offset_bottom=50.0
+color=Color(0.8, 0.7, 0.9, 0.5)
+
+[node name="Memory2" type="Area2D" parent="MemorySpots"]
+position=Vector2(1200, 400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MemorySpots/Memory2"]
+shape=CircleShape2D.new()
+
+[node name="Visual" type="ColorRect" parent="MemorySpots/Memory2"]
+offset_left=-50.0
+offset_top=-50.0
+offset_right=50.0
+offset_bottom=50.0
+color=Color(0.7, 0.8, 0.9, 0.5)
+
+[node name="Memory3" type="Area2D" parent="MemorySpots"]
+position=Vector2(960, 700)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MemorySpots/Memory3"]
+shape=CircleShape2D.new()
+
+[node name="Visual" type="ColorRect" parent="MemorySpots/Memory3"]
+offset_left=-50.0
+offset_top=-50.0
+offset_right=50.0
+offset_bottom=50.0
+color=Color(0.9, 0.8, 0.7, 0.5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MemoryText" type="Label" parent="UI"]
+offset_left=50.0
+offset_top=50.0
+offset_right=450.0
+offset_bottom=150.0
+text="Walk around to discover memories..."
+theme_override_font_sizes/font_size=24
