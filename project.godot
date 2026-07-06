@@ -1,0 +1,15 @@
+[gd_resource type="GDScript" format=3 uid="uid://memory_dream_game"]
+
+config_version=5
+
+[application]
+config/name="Memory Dream Game"
+config/version="1.0.0"
+run/main_scene="res://scenes/main_menu.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+
+[physics]
+physics_server_3d/enabled=false
+
+[rendering]
+textures/canvas_textures/default_texture_filter=0
