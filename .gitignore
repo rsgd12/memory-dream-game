@@ -1,0 +1,20 @@
+# Godot-specific ignores
+.godot/
+*.exe
+*.so
+*.dll
+*.dylib
+*.zip
+
+# User-specific settings
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.import
+*.tres
+export/
